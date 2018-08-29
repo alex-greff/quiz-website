@@ -1,0 +1,407 @@
+/*
+Alex Greff
+20 Septemeber, 2016
+Style Sheet Researched
+My style sheet with stylings that I found online
+Although I did copy theese, I have practially customized
+everything so that nothing is 100% copied and pasted
+*/
+
+/*Button Styles General*/
+section {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+section:last-child {
+  margin-bottom: 0;
+}
+section a {
+  display: inline-block;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+/*Inner Border*/
+.cmn-t-border {
+  padding: 20px 40px;
+  color: #fff;
+  background-color: #ff3296;
+  transition: box-shadow 0.2s;
+  font-family: 'LatoThinItalic';
+}
+.cmn-t-border:hover {
+  color: #fff;
+  box-shadow: inset 0 0 0 10px #98004a;
+}
+
+/*Translate and Box shadow*/
+.cmn-t-translate-bshadow {
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #5A8E96;
+  transition: box-shadow 1s, transform 1s;
+
+  position: relative;
+  left: 75%;
+  top: 20px;
+  width: 10%;
+  font-family: 'LatoThinItalic';
+
+  animation-name: colorSwitch;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+.cmn-t-translate-bshadow a {
+	color: #fff;
+	font-family: 'LatoThinItalic';	
+	text-align: left;
+	transition: color 1s;
+}
+.cmn-t-translate-bshadow a:active {
+	color: #9EFF9E;
+}
+
+.cmn-t-translate-bshadow:hover {
+  color: #fff;
+  box-shadow: 10px 0px 0 #37565B;
+  transform: translate(-30px, 0px);
+  
+  animation: backButtonHover;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;	
+}
+
+@keyframes backButtonHover {
+	0% {background-color: #96C0FF;}
+    50% {background-color: #FF93CD;}
+    100% {background-color: #96C0FF;}	
+}
+
+/*Lateral Shake*/
+.cmn-t-shake {
+  padding: 20px 40px;
+  color: #fff;
+  background-color: #ff3296;
+}
+.cmn-t-shake:hover {
+  color: #fff;
+  animation: shake .5s ease-in-out;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-10px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+/*Link Animated Underline*/
+.cmn-t-underline {
+  position: relative;
+  color: #EFB7FF;
+  transition: color 1s;
+  font-family: 'LatoThin';
+}
+.cmn-t-underline:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #FF89A5;
+  content: "";
+  transition: width 1s;
+}
+.cmn-t-underline:hover {
+  color: #FF89A5;
+}
+.cmn-t-underline:hover:after {
+  width: 100%;
+}
+
+.style-link, .userDisplay {
+	transition: transform 1s;
+	text-align: left;
+	position: relative;
+	width: 40%;
+	left: 5%;
+	top: 20px;
+}
+.style-link:hover {
+	transform: translate(10px,0px);
+}
+
+
+/*Input Boxes*/
+input[type="text"], input[type="password"], input[type="number"]{
+  display: block;
+  margin: 0;
+  width: 350px;
+  font-family: 'LatoMedium';
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+  outline: none;
+}
+
+.style-1 input[type="text"], .style-1 input[type="password"], .style-1 input[type="submit"], input[type="number"] {
+	background: linear-gradient(to bottom right, #EFEFEF, #FFFFFF );
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+
+	transition: transform 1s, box-shadow 0.5s, border 0.5s;
+}
+.style-1 input[type="text"]:focus, .style-1 input[type="text"].focus, .style-1 input[type="password"]:focus, .style-1 input[type="password"].focus, input[type="number"]:focus, input[type="number"].focus {
+	border: solid 1px #707070;
+	box-shadow: 0 0 5px 1px #969696;
+}
+
+.style-1 input[type="text"]:hover, .style-1 input[type="text"].hover, .style-1 input[type="password"]:hover, .style-1 input[type="password"].hover, input[type="number"]:hover, input[type="number"].hover {
+	transform: translate(-5px, 0px);
+}
+
+.style-1 input[type="submit"] {
+	width: 200px;
+	font-family: 'LatoThin';
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;	
+}
+
+.style-1 input[type="submit"]:hover, .style-1 input[type="submit"].hover {
+	transform: translate(0px, 5px);	
+}
+
+.style-1 input[type="submit"]:focus, .style-1 input[type="submit"].focus {
+	border: solid 1px #707070;
+	box-shadow: 0 0 5px 1px #969696;
+}
+
+/*Start Button Stylings*/
+.style-startButton input[type="submit"] {
+  cursor: pointer;
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+
+	width: 400px;
+	height: 200px;
+	font-family: 'LatoRegular';
+	font-size: 4.7em;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+
+	transition: transform 1s, box-shadow 0.5s, border 0.5s, font-size, 0.5s;
+
+	animation-name: colorSwitch;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.style-startButton input[type="submit"]:hover, .style-1 input[type="submit"].hover {
+
+	transform: translate(0px, 10px);
+
+	border: solid 1px #707070;
+	animation: borderAnim;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;	
+}
+
+.style-startButton input[type="submit"]:focus, .style-1 input[type="submit"].focus {
+	border: solid 10px #707070;
+	box-shadow: 0 0 5px 1px #969696;
+	font-size: 5.3em;
+}
+
+/*Other Button Stylings*/
+.style-buttons input[type="submit"] {
+  cursor: pointer;
+	padding: 10px;
+	border: solid 1px #dcdcdc;
+
+	width: 200px;
+	height: 100px;
+	font-family: 'LatoRegular';
+	font-size: 1.2em;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+
+	transition: transform 1s, box-shadow 0.5s, border 0.5s, font-size, 0.5s;
+
+	animation-name: colorSwitch;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.style-buttons input[type="submit"]:hover, .style-1 input[type="submit"].hover {
+	transform: translate(0px, 5px);
+
+	border: solid 1px #707070;
+	animation: borderAnim;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;	
+}
+
+.style-buttons input[type="submit"]:focus, .style-1 input[type="submit"].focus {
+	border: solid 5px #707070;
+	box-shadow: 0 0 5px 1px #969696;
+	font-size: 1.3em;
+}
+
+@keyframes colorSwitch {
+  	0% {background-color: #96C0FF;}
+    50% {background-color: #C1ADFF;}
+    100% {background-color: #96C0FF;}
+}
+
+@keyframes borderAnim {
+	0% {box-shadow: 0 0 5px 1px #969696; background-color: #96C0FF;}
+    50% {box-shadow: 0 0 20px 1px #969696; background-color: #FF93CD;}
+    100% {box-shadow: 0 0 5px 1px #969696; background-color: #96C0FF;}	
+}
+
+
+
+/*The username list box*/
+.style-list {
+	display: block;
+	outline: none;
+	background: linear-gradient(to bottom right, #EFEFEF, #FFFFFF );
+	width: 372px;
+	padding: 10px;
+	border: solid 1px #A0BFDB;
+
+	transition: transform 1s, box-shadow 0.5s, border 0.5s;
+	
+	font-family: sans-serif;
+	/*color: #A9A9A9;*/
+  	font-size: 18px;
+  	appearance: none;
+  	box-shadow: none;
+  	border-radius: none;
+}
+.style-list:focus {
+	  border: solid 1px #707070;
+	  box-shadow: 0 0 5px 1px #969696;  		
+}
+
+.style-list:hover {
+	  transform: translate(-5px, 0px);
+}
+
+input[type=radio], input[type=checkbox] {
+	  display: none;
+}
+
+.style-radio {
+	float: left;
+
+	margin: 10px 10px 5px 150px;
+
+	width:20px;
+	height:20px;
+}
+
+.style-radioLabel {
+	float: left;
+
+	font-family: 'LatoRegular';
+	font-size: 1.2em;
+
+	margin: 5px 10px 5px 10px;
+}
+
+label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+	margin-right: 15px;
+	font-size: 13px;
+	left: 170px;
+}
+label:before {
+	content: "";
+	display: inline-block;
+
+	width: 20px;
+	height: 20px;
+
+	margin-right: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	background-color: #EAEAEA;
+
+	transition: background-color 0.5s, box-shadow 0.5s, transform 0.5s;
+}
+
+.radio label:before {
+	border-radius: 8px;
+}
+.checkbox label {
+	margin-bottom: 10px;
+}
+.checkbox label:before {
+    border-radius: 3px;
+}
+
+input[type=radio]:checked + label:before {
+    background-color: #9EFF9E;
+    box-shadow: 0 0 5px 1px #969696;
+    transform: translate(-5px,0px); 
+
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 13px;
+}
+
+input[type=checkbox]:checked + label:before {
+    background-color: #9EFF9E;
+    box-shadow: 0 0 5px 1px #969696;
+    transform: translate(-5px,0px); 
+    
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 13px;
+}
